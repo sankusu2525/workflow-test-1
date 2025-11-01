@@ -11,13 +11,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: setup python
-        users: actions/setup-python@v5
-        withh:
-          python-version: '3.13'
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.13
 
       - name: Install dependencies
-        runn: pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Run pytest
         run: pytest
